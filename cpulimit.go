@@ -85,7 +85,7 @@ func (l *Limiter) Start() {
 // lifted from gopsutil/cpu
 func getAllBusy(t cpu.TimesStat) (float64, float64) {
 	busy := t.User + t.System + t.Nice + t.Iowait + t.Irq +
-		t.Softirq + t.Steal + t.Guest + t.GuestNice + t.Stolen
+		t.Softirq + t.Steal + t.Guest + t.GuestNice
 	return busy + t.Idle, busy
 }
 
